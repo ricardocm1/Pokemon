@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+
+    <string name="photos">Pokédex</string>
+    <string name="load_error">Something went wrong. Please try again later.</string>
+    <string name="no_more_items_available">No more items available.</string>
+    <string name="loading">Loading…</string>
+
+    <!-- Pokemon -->
+    <string name="height_label">Height:</string>
+    <string name="weight_label">Weight:</string>
+    <string name="types_label">Types:</string>
+    <string name="moves_label">Moves:</string>
+    <string name="abilities_label">Abilities:</string>
+    <string name="forms_label">Forms:</string>
+</resources>

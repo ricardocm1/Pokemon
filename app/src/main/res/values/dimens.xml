@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">40dp</dimen>
+
+    <dimen name="margin_detail">20dp</dimen>
+
+    <!-- Title -->
+    <dimen name="title_font_size">32sp</dimen>
+    <dimen name="title_decoration_width">100dp</dimen>
+    <dimen name="title_decoration_height">2dp</dimen>
+    <dimen name="title_decoration_margin">10dp</dimen>
+
+    <dimen name="text_font_size">18sp</dimen>
+
+    <dimen name="photo_card_height">168dp</dimen>
+    <dimen name="photo_card_width">140dp</dimen>
+    <dimen name="photo_card_radius">10dp</dimen>
+    <dimen name="photo_title_padding">5dp</dimen>
+
+    <dimen name="margin_pokemon_info_top">16dp</dimen>
+    <dimen name="margin_pokemon_info_value_start">4dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
+</resources>

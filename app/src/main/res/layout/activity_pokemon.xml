@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tbToolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin" />
+
+            <com.android.pokemon.components.Title
+                android:id="@+id/ttPokemon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivPokemon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ttPokemon"
+                tools:layout_height="300dp"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/tvPokemonHeightLabel"
+                style="@style/PokemonInfoLabel"
+                android:layout_marginTop="@dimen/margin_detail"
+                android:text="@string/height_label"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/ivPokemon" />
+
+            <TextView
+                android:id="@+id/tvPokemonHeightValue"
+                style="@style/PokemonInfoValue"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvPokemonHeightLabel"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toEndOf="@id/tvPokemonHeightLabel"
+                tools:text="7" />
+
+            <TextView
+                android:id="@+id/tvPokemonWeightLabel"
+                style="@style/PokemonInfoLabel"
+                android:text="@string/weight_label"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPokemonHeightValue" />
+
+            <TextView
+                android:id="@+id/tvPokemonWeightValue"
+                style="@style/PokemonInfoValue"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvPokemonWeightLabel"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toEndOf="@id/tvPokemonWeightLabel"
+                tools:text="69" />
+
+            <TextView
+                android:id="@+id/tvPokemonTypesLabel"
+                style="@style/PokemonInfoLabel"
+                android:text="@string/types_label"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPokemonWeightValue" />
+
+            <TextView
+                android:id="@+id/tvPokemonTypesValue"
+                style="@style/PokemonInfoValue"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvPokemonTypesLabel"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toEndOf="@id/tvPokemonTypesLabel"
+                tools:text="grass" />
+
+            <TextView
+                android:id="@+id/tvPokemonMovesLabel"
+                style="@style/PokemonInfoLabel"
+                android:layout_marginBottom="@dimen/margin"
+                android:text="@string/moves_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPokemonTypesValue"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvPokemonMovesValue"
+                style="@style/PokemonInfoValue"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvPokemonMovesLabel"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toEndOf="@id/tvPokemonMovesLabel"
+                tools:text="razor-wind" />
+
+            <TextView
+                android:id="@+id/tvPokemonAbilitiesLabel"
+                style="@style/PokemonInfoLabel"
+                android:layout_marginBottom="@dimen/margin"
+                android:text="@string/abilities_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPokemonMovesValue"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvPokemonAbilitiesValue"
+                style="@style/PokemonInfoValue"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvPokemonAbilitiesLabel"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toEndOf="@id/tvPokemonAbilitiesLabel"
+                tools:text="overgrow" />
+
+            <TextView
+                android:id="@+id/tvPokemonFormsLabel"
+                style="@style/PokemonInfoLabel"
+                android:layout_marginBottom="@dimen/margin"
+                android:text="@string/forms_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPokemonAbilitiesValue"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/tvPokemonFormsValue"
+                style="@style/PokemonInfoValue"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvPokemonFormsLabel"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintStart_toEndOf="@id/tvPokemonFormsLabel"
+                tools:text="bulbasaur" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fabFavoriteCharacter"-->
+    <!--        android:layout_width="@dimen/fab_button_width"-->
+    <!--        android:layout_height="@dimen/fab_button_height"-->
+    <!--        android:layout_marginEnd="@dimen/margin_fab_end"-->
+    <!--        android:layout_marginBottom="@dimen/margin_fab_bottom"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        tools:src="@drawable/ic_favorite_border" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
